@@ -26,6 +26,7 @@ int main() {
     // Getting the end time
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> float_ms = end - start;
+
     std::cout << "64-bit Floating Point Operation Benchmark completed in " << float_ms.count() / 1000 << " seconds." << std::endl;
 
     return 0;

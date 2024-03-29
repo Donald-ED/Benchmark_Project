@@ -11,4 +11,18 @@ int main() {
     // Start time
     auto start = std::chrono::high_resolution_clock::now();
 
+    // Writing to file
+    std::ofstream outfile(filename, std::ofstream::binary);
+    for (int i = 0; i < 100000; ++i){
+        outfile.write(writeBuffer.data(), writeBuffer.size());
+    }
+    outfile.close();
+
+    // Reading from file
+    std::ifstream infile(filename, std::ifstream::binary);
+    while (infile.read(readBuffer.data(), readBuffer.size())) {
+        // Simualting process
+    }
+
+    infile.close();
 }

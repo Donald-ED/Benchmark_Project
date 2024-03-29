@@ -4,7 +4,7 @@
 #include <vector>
 
 int main() {
-    const std::string filename = "temp_file_large_bin";
+    const std::string filename = "Harddrive2/temp_file_large_bin";
     std::vector<char> writeBuffer(10000, 'B'); // 10,000 bytes of 'B'
     std::vector<char> readBuffer(10000, 'B'); // 10,000 bytes for reading
 
@@ -25,4 +25,11 @@ int main() {
     }
 
     infile.close();
+
+    // End timer and calculate duration
+    auto end = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double, std::milli> duration = end - start;
+
+    std::cout << "Hard Drive Benchmark 2 completed in " << duration.count() << " seconds." << std::endl;
+
 }

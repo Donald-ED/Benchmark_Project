@@ -19,4 +19,10 @@ int main() {
         vec[i] = i % 256;
     }
 
+    auto end = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double, std::milli> float_ms = end - start;
+    std::cout << "Memory Benchamrk completed in " << float_ms.count()/1000 << " seconds." << std::endl;
+
+    return 0;
+
 }

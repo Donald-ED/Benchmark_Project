@@ -27,6 +27,6 @@ int main() {
     std::chrono::duration<double, std::milli> float_ms = end - start;
 
     std::cout<< "32-bit Integer Operation Benchmark completed in "<< float_ms.count()/1000 << " seconds." <<std::endl;
-
+    
     return 0; 
 }

@@ -14,4 +14,9 @@ int main() {
         read_sum += vec[i];
     }
 
+    // Write to array
+    for(long long i = 0; i < 5000000000LL; ++i) {
+        vec[i] = i % 256;
+    }
+
 }
